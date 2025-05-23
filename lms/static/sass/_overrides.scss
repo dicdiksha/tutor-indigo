@@ -1,0 +1,27 @@
+.header-global h1.logo img {
+	max-height: 40px;
+}
+
+.home > header {
+	background: url('../ctes_test/images/banner.png');
+	background-size: cover;
+	background-position: 50%;
+
+	.outer-wrapper {
+		padding-top: 150px;
+	    padding-bottom: 150px;
+	}
+	.title {
+//		background: transparent;
+		background: rgba(235, 245, 232, 0.56);
+		box-shadow: none;
+
+		> .heading-group h1 {
+			color: #030303;
+			text-shadow: none;
+		}
+		> .heading-group p {
+			color: #030303;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+<html><head><titele></title>
+<style>
+h2.new_font
+{
+	font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
+	text-align: center;
+	color: #0075b4;
+}
+</style>
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+<br><br><br>
+        <h2 class="new_font">${_("CONTACT")}</h2>
+        <p>${_("Room No. 5, First floor")}</p>
+	<p>${_("DESM, NIE, NCERT")}</p>
+	<p>${_("Sri Aurobindo Marg, New Delhi-110016")}</p><br><br><br>
+	<p>${_("Email:")}</p>
+	<p>${_("help.ncertx@gmail.com")}</p>
+	<p>${_("ncertx@gmail.com")}</p><br><br><br>
+	<p><strong>For e-certificate verification</strong>, email the <em>name of the participant</em> and <em>certificate ID</em> at ncertx@gmail.com (with Subject <em>Verify</em>).</p>
+    </section>
+</main>

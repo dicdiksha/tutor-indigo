@@ -1,0 +1,46 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace name='static' file='/static_content.html'/>
+<%block name="pagetitle">${_("Pay Fee Online")}</%block>
+<html><head>
+<style>
+.help_tagline
+{ text-align:center;
+}
+</style>
+</head>
+<body>
+<img src="${static.url('images/banner_pay_fee_online.png')}" alt="image" style="width:100%;"/><br><br><br>
+<section class="about container">
+<!--<p style="text-align:center;">Annoucement for new batch coming soon.</p>-->
+<!--<p style="text-align:center;">Enrollment for the batch 2024-25 starts <strong>19 September, 2024</strong>.</p><br/><br/>
+<p style="text-align:center;">The payment link will be available once the enrollment process starts.</p>-->
+
+<p style="text-align:center; color:red;">Enrollment for batch 2024-25 has been closed.</p>
+<!--<h2 style="text-align:center;">IMPORTANT UPDATE REGARDING PAYMENT</h2>
+
+	<p style="text-align:justify;line-height:1.6;">It has been found that some teachers have already registered on the course portal but couldn’t pay the course enrollment fee.</p>
+<p style="text-align:justify;line-height:1.6;">This may be due to the poor weather conditions for which there were network outages in some of the States last week. Therefore, it has been decided to allow such applicants to pay their enrollment fee latest by 10 November, 2024. </p>-->
+<!--<p>Please note that no new registrations are invited from the applicants.</p>-->
+
+<!--<br><br>
+<p class="help_tagline">
+	<a href="https://ncertx.in/asset-v1:All_published+All_published_101x+2023+type@asset+block@Instructions_for_payment_2024.pdf" target="_blank">See instructions for making payment</a>
+</p><br><br>
+
+<p class="help_tagline">
+	<a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=790578" target="_blank">
+
+	Click here for online payment</a>
+</p><br><br>
+<p class="help_tagline">(Clicking on the above link will take you to a secured SBI Collect website)</p><br><br>-->
+<!--<p class="help_tagline"><strong>UPDATE</strong>: The last date for enrollment has been extended till <strong>31<sup>st</sup> October, 2024</strong> and the course will now commence from <strong>4<sup>th</sup> November, 2024.</strong></p>-->
+
+
+</section>  
+</body>
+</html>
+
+  
+
