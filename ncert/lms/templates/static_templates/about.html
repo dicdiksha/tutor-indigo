@@ -5,18 +5,44 @@
 
 <%block name="pagetitle">${_("About")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>
-            <%block name="pageheader">${page_header or _("About")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("Welcome to NCERTX. Feel free to add your own content.")}</%block>
-        </p>
-        <!-- NEW IN INDIGO: add graphic image -->
-        <div class="graphic-img">
-            <img src="${static.url('images/about.svg')}" alt="Runs on Tutor" />
-            <img class="dark" src="${static.url('images/about-dark.svg')}" alt="Runs on NCERTX" />
-        </div>
+<html><head><titele></title>
+    <style>
+    p.big {
+        line-height: 150%;
+        text-align: justify;	
+    }
+    h2.new_font
+    {
+        font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
+        text-align: center;
+        color: #0075b4;
+    }
+    </style>
+    </head>
+    <body>
+    <section class="container about" style="padding-left:100px; padding-right:100px;">
+    <br><br>
+    <!--<h2 class="new_font">Announcement for new batch coming soon.</h2>-->
+    <h2 class="new_font">What is this course about?</h2>
+    <p class="big"> A MOOC for science teachers- This is a completely online course, primarily aimed for teachers dealing with Science at the middle level (classes 6-8) in schools. The purpose of this course is to help in professional development of a large number of pre-service and in-service teachers to become reflective and competent practitioners. The course consists of multimedia based interactive learning materials. The course provides in-depth yet flexible learning opportunities to anyone interested in teaching-learning of science at middle level. Each module starts from the basics and attempts to develop learner’s understanding upto a significant conceptual depth.</p>
+    <p class="big"><strong>NOTE:</strong> NCERT does not claim this course to be equivalent to any other course required as a qualification for teacher's appointment. This is purely an academic course and cannot be claimed for any exemption.</p><br><br><br>
+    <h2 class="new_font">Is there any fee to be paid?</h2>
+    <p class="big">Yes, there is a onetime enrollment fee of Rs. 2000. There is no other fee involved. The mode of payment is ONLINE ONLY.</p><br><br><br>
+    <h2 class="new_font">Who can enroll?</h2>
+    <p class="big"><ul><li style="line-height:1.6;">Candidates having Bachelor of Science (B.Sc) degree and</li>
+    <li style="line-height:1.6;">In-service teachers teaching science for classes 6-8 across the country<br/><span style="padding-left:160px;">OR</span><br/>Having diploma or degree in education<br/><span style="padding-left:160px;">OR</span><br/>Pre-service teachers pursuing their diploma or degree in education<br/><span style="padding-left:160px;">OR</span><br/>Any other individual directly involved in science education.</li>
+    </ul></p><br><br>
+    <h2 class="new_font">How to enroll in this Course?</h2>
+    <p class="big"> Go to <a href="https://ncertx.in/pay_fee_online" target="_blank">PAY FEE ONLINE</a> page and make a payment of Rs. 2000 using the link provided. Within a week after making payment, you will receive an ‘Invitation’ email from NCERTX. Follow the instructions given in the email to complete the enrollment process. The last date for enrollment is <span style="text-decoration: line-through;">19<sup>th</sup> October</span><strong> 31<sup>st</sup> October, 2024</strong>. Kindly, use same email ID everywhere.<br/><br/>
+    
+    <h2 class="new_font">How to go through the course?</h2>
+    <p class="big">Online 24x7- Using a laptop/desktop computer with internet connectivity, the enrolled participant can sign in (using his/her registered email ID and password) to his/her account on <em>ncertx.in</em> platform and access the course. It can be accessed from any place, 24x7 during the course run period.</p><br><br><br>
+    <h2 class="new_font">What is the duration of this course?</h2>
+    <p class="big">40 Weeks- The course will start from <span style="text-decoration: line-through;"> 21<sup>st</sup> October</span> <strong> 4<sup>th</sup> November, 2024</strong> and tentatively end on 24<sup>th</sup> August, 2025. The course consists of <a href="https://ncertx.in/courses/course-v1:All_published+All_published_101x+2023/about#syllabus">40 modules</a>. On an average, each module can be completed in 6-8 hours. Every Monday, a new module will be opened and it is to be completed in a week. All the modules along with the final exam are to be completed in 40 weeks.</p><br><br><br>
+    <h2 class="new_font">What is the assessment method?</h2>
+    <p class="big">40 end of module tests and a Final exam- There is an objective test at the end of each module. It will be opened with its respective module for 15 days. Learners can appear for these tests as per their convenience within 15 days. There is a final exam at the end of course. Those learners who complete all the modules and appear in all the 40 tests will be allowed to appear for this final exam. It will be a timed exam and the date will be announced in advance.</p><br><br><br>
+    <h2 class="new_font">Who will award Diploma?</h2>
+    <p class="big">NCERT- On successful completion, NCERT will award an e-certificate for “Teaching of
+    Science at Middle Stage”.</p><br>
     </section>
-</main>
+    </body></html>  
