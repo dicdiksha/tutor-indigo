@@ -57,6 +57,11 @@ THEME_REPO="https://github.com/dicdiksha/tutor-indigo"
 THEME_NAME="ncert"
 THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
 
+# Pull latest changes from the 'ncert' branch
+git pull origin ncert
+
+cp -r "$THEME_NAME" "$THEMES_DIR" || true
+
 tutor local do settheme "$THEME_NAME"
 tutor images build openedx
 tutor local stop

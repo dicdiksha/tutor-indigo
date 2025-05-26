@@ -13,7 +13,7 @@ THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
 # Pull latest changes from the 'ncert' branch
 git pull origin ncert
 
-cp -r "$THEME_NAME" "$THEMES_DIR/$THEME_NAME" || true
+cp -r "$THEME_NAME" "$THEMES_DIR" || true
 
 tutor local do settheme "$THEME_NAME"
 tutor images build openedx
