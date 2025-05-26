@@ -7,11 +7,11 @@ def assign_theme(domain):
     if not site.themes.exists():
         site.themes.create(theme_dir_name='indigo')
 
-assign_theme('{{ LMS_HOST }}')
-assign_theme('{{ LMS_HOST }}')
-assign_theme('{{ LMS_HOST }}:8000')
-assign_theme('{{ CMS_HOST }}')
-assign_theme('{{ CMS_HOST }}:8001')
-assign_theme('{{ PREVIEW_LMS_HOST }}')
-assign_theme('{{ PREVIEW_LMS_HOST }}:8000')
+assign_theme('learning.ncert.gov.in')
+assign_theme('learning.ncert.gov.in')
+assign_theme('learning.ncert.gov.in:8000')
+assign_theme('studio.learning.ncert.gov.in')
+assign_theme('studio.learning.ncert.gov.in:8001')
+assign_theme('preview.learning.ncert.gov.in')
+assign_theme('preview.learning.ncert.gov.in:8000')
 "
