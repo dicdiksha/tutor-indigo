@@ -10,15 +10,13 @@ THEME_REPO="https://github.com/dicdiksha/tutor-indigo"
 THEME_NAME="ncert"
 THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
 
-if [ ! -d "tutor-indigo" ]; then
-  git clone "$THEME_REPO"
-fi
+# Pull latest changes from the 'ncert' branch
+git pull origin ncert
 
-cd tutor-indigo
 cp -r "$THEME_NAME" "$THEMES_DIR/$THEME_NAME" || true
 
 tutor local do settheme "$THEME_NAME"
-tutor images build openedx --no-cache
+tutor images build openedx
 tutor local stop
 tutor local start -d
 sudo service nginx restart

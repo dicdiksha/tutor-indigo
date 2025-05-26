@@ -28,7 +28,7 @@ tutor local do settheme ncert
 ## 5. Rebuild Open edX Images
 
 ```sh
-tutor images build openedx --no-cache
+tutor images build openedx
 ```
 
 ## 6. Restart Open edX and Nginx
@@ -57,15 +57,8 @@ THEME_REPO="https://github.com/dicdiksha/tutor-indigo"
 THEME_NAME="ncert"
 THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
 
-if [ ! -d "tutor-indigo" ]; then
-  git clone "$THEME_REPO"
-fi
-
-cd tutor-indigo
-cp -r "$THEME_NAME" "$THEMES_DIR/$THEME_NAME" || true
-
 tutor local do settheme "$THEME_NAME"
-tutor images build openedx --no-cache
+tutor images build openedx
 tutor local stop
 tutor local start -d
 sudo service nginx restart
@@ -75,5 +68,5 @@ sudo service nginx restart
 
 ```sh
 chmod +x deploy_ncert_theme.sh
-sudo bash deploy_ncert_theme.sh
+bash deploy_ncert_theme.sh
 ```
