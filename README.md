@@ -47,29 +47,7 @@ sudo service nginx restart
 
 ## Run as Shell Script Automation
 
-1. Save the following script as `deploy_ncert_theme.sh` in your home directory or project root:
-
-```sh
-#!/bin/bash
-set -e
-
-THEME_REPO="https://github.com/dicdiksha/tutor-indigo"
-THEME_NAME="ncert"
-THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
-
-# Pull latest changes from the 'ncert' branch
-git pull origin ncert
-
-cp -r "$THEME_NAME" "$THEMES_DIR" || true
-
-tutor local do settheme "$THEME_NAME"
-tutor images build openedx
-tutor local stop
-tutor local start -d
-sudo service nginx restart
-```
-
-2. Make the script executable and run it:
+1. Make the script executable and run it:
 
 ```sh
 chmod +x deploy_ncert_theme.sh
