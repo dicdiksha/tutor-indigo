@@ -13,9 +13,31 @@ THEMES_DIR="$(tutor config printroot)/env/build/openedx/themes"
 # Pull latest changes from the 'ncert' branch
 git pull origin ncert
 
-cp -r "$THEME_NAME" "$THEMES_DIR" || true
-
 tutor local do settheme "$THEME_NAME"
+
+# Verify if theme directory exists before copying
+if [ ! -d "$THEME_NAME" ]; then
+  echo "Error: Theme directory '$THEME_NAME' does not exist in $(pwd)."
+  exit 1
+fi
+
+# Remove existing theme directory at destination
+if [ -d "$THEMES_DIR/$THEME_NAME" ]; then
+  echo "Removing existing theme at $THEMES_DIR/$THEME_NAME"
+  rm -rf "$THEMES_DIR/$THEME_NAME"
+fi
+
+# Copy theme and verify
+echo "Copying theme to $THEMES_DIR/$THEME_NAME"
+cp -r "$THEME_NAME" "$THEMES_DIR/$THEME_NAME"
+
+if [ -d "$THEMES_DIR/$THEME_NAME" ]; then
+  echo "Theme copied successfully."
+else
+  echo "Error: Failed to copy theme to $THEMES_DIR/$THEME_NAME"
+  exit 1
+fi
+
 tutor images build openedx
 tutor local stop
 tutor local start -d
