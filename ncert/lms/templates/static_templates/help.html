@@ -1,4 +1,4 @@
-<!-- <%namespace name='static' file='../static_content.html'/>
+<%namespace name='static' file='../static_content.html'/>
 <%page expression_filter="h"/>
 <%! from django.utils.translation import gettext as _ %>
 <%inherit file="../main.html" />
@@ -12,58 +12,11 @@
         </h1>
         <p>
             <%block name="pagecontent">${page_content or _("Welcome to NCERTX. Feel free to add your own content.")}</%block>
-        </p> -->
+        </p>
         <!-- NEW IN INDIGO: add graphic image -->
-        <!-- <div class="graphic-img">
+        <div class="graphic-img">
             <img src="${static.url('images/help.svg')}" alt="Runs on Tutor" />
             <img class="dark" src="${static.url('images/help-dark.svg')}" alt="Runs on Tutor" />
         </div>
     </section>
-</main> -->
-
-<%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
-<%inherit file="../main.html" />
-<%block name="pagetitle">${_("FAQ")}</%block>
-<html><head><titele></title>
-<style>
-p.big {
-    line-height: 150%;
-    text-align: justify;	
-}
-h2.new_font
-{
-	font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
-	text-align: center;
-	color: #0075b4;
-}
-</style>
-</head>
-<body>
-<section class="container about" style="padding-left:100px; padding-right:100px;">
-<br><br>
-<h2 class="new_font">Learner's FAQ</h2><br><br>
-<p class="big">1. How do I sign up on NCERTX ?<br>
-A. To sign up on NCERTX, just click on 'REGISTER', fill up all the details and click 'Create your account'. You will recieve an activation link on your registered email-ID, click on that link and now you can login to your NCERTX account.<br><br>
-2. I am getting error while registering at ncertx.in. Help me out.<br>
-A. Be double sure while filling your email-ID in the 'Email' field and use only Roman letters (a-z or A-Z), western numerals (0-9), underscores (_), and hyphens (-) in the 'Public username' field. Also, do not forget to click on  'I agree to the NCERT Online Learning Terms of Service and Honor Code' checkbox given at the last of registration page. <br><br>
-3. How do I login to my NCERTX account ?<br>
-A. Click on 'SIGN IN' tab and sign in using your registered email-id and password.<br><br>
-4. I am getting some technical error while registering/signing up. What should I do now ?<br>
-A. These errors are caused mainly due to the settings of the browser. Go to browser's settings and<br>
-<ul style="line-height:1.7;">
-  <li>Enable JavaScript and cookies.</li>
-  <li>Clear your browser's cache.</li>
-</ul></p>
-<p class="big">5. Are the courses offered in English language only ?<br>
-A. Yes, the courses are currently offered in English only.<br><br>
-6. Can I access NCERTX courses on my mobile/tablet?<br>
-A. Yes. However, it is recommended to use laptop/desktop computer with good internet connectivity for accessing course modules and giving timed exams.<br><br>
-7. Did not receive account activation email from NCERTX upon sign up. What should I do?<br>
-A. This problem arises in cases either the email address provided is not correct OR the email inbox associated with the given email account is full. To avoid this problem, the email address provided must be correct and the email inbox should have some empty space.
-<br><br><br>
-If your question is not listed here, please submit your query at <i>ncertx@gmail.com</i>
-</p>
-</section>
-</body></html>
-
+</main>

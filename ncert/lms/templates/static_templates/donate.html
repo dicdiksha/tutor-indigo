@@ -1,4 +1,4 @@
-<!-- <%namespace name='static' file='../static_content.html'/>
+<%namespace name='static' file='../static_content.html'/>
 <%page expression_filter="h"/>
 <%! from django.utils.translation import gettext as _ %>
 <%inherit file="../main.html" />
@@ -12,67 +12,11 @@
         </h1>
         <p>
             <%block name="pagecontent">${page_content or _("Welcome to NCERTX. Feel free to add your own content.")}</%block>
-        </p> -->
+        </p>
         <!-- NEW IN INDIGO: add graphic image -->
-        <!-- <div class="graphic-img">
+        <div class="graphic-img">
             <img src="${static.url('images/donate.svg')}" alt="Runs on Tutor" />
             <img class="dark" src="${static.url('images/donate-dark.svg')}" alt="Runs on Tutor" />
         </div>
     </section>
-</main> -->
-
-<%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
-<%inherit file="../main.html" />
-<%block name="pagetitle">${_("Team")}</%block>
-<html><head><titele></title>
-<style>
-p.big {
-    line-height: 150%;
-    text-align: justify;	
-}
-p.text_center {
-    line-height: 150%;
-    text-align:center; 
-    color: #0075b4;	
-}
-h2.new_font
-{
-	font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
-	text-align: center;
-	color: #0075b4;
-}
-td {
-    padding: 5px;
-    text-align: left;
-    line-height: 150%;
-    width: 500px;
-}
-</style>
-</head>
-<body>
-<section class="container about" style="padding-left:100px; padding-right:100px;">
-<br><br><br>
-<h2 class="new_font">Team</h2><br>
-<table style="table-layout: fixed; width: 1000px;";>
-<p class="text_center"><u>Project Coordinators</u></p><br><br>
-<tr>
-<td>Dr. Anjni Koul, Professor, DESM</td>
-<td>Dr. Rejaul Karim Barbhuiya, Assistant Professor, CIET</td>
-</tr>
-</table><br><br><br>
-
-
-<table style="table-layout: fixed; width: 1000px;">
-<p class="text_center"><u>Project Staff</u></p><br><br>
-<tr>
-<td>Nitika Rani, Course Administrator, DESM</td>
-<td>Mohd. Khalid, System Analyst, DESM</td>
-</tr>
-</table>
-
-</section>
-</body></html>
-
-
-
+</main>
