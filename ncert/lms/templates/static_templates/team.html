@@ -2,7 +2,7 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 <%block name="pagetitle">${_("Team")}</%block>
-<html><head><titele></title>
+<!-- <html><head><titele></title> -->
 <style>
 p.big {
     line-height: 150%;
@@ -26,8 +26,9 @@ td {
     width: 500px;
 }
 </style>
-</head>
-<body>
+<!-- </head> -->
+<!-- <body> -->
+<%block name="content">
 <section class="container about" style="padding-left:100px; padding-right:100px;">
 <br><br><br>
 <h2 class="new_font">Team</h2><br>
@@ -49,7 +50,8 @@ td {
 </table>
 
 </section>
-</body></html>
+<%block>
+<!-- </body></html> -->
 
 
 
